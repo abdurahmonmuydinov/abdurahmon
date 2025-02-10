@@ -84,54 +84,59 @@ class _salomState extends State<salom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("data"),),
+        appBar: AppBar(
+          title: Text("2 - Sahifa"),
+        ),
         body: Column(
-      children: [
-        Expanded(
-          child: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("rasm/i.jpg"), fit: BoxFit.cover)),
-            width: double.infinity,
-            height: 600,
-          ),
-        ),
-        Container(
-          width: double.infinity,
-          height: 200,
-          child: Row(
-            children: [
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("rasm/i.jpg"), fit: BoxFit.cover)),
-                  height: double.infinity,
-                  width: 300,
-                ),
+          children: [
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("rasm/i.jpg"), fit: BoxFit.cover)),
+                width: double.infinity,
+                height: 600,
               ),
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("rasm/a.jpg"), fit: BoxFit.cover)),
-                  height: double.infinity,
-                  width: 300,
-                ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 200,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("rasm/i.jpg"),
+                              fit: BoxFit.cover)),
+                      height: double.infinity,
+                      width: 300,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("rasm/a.jpg"),
+                              fit: BoxFit.cover)),
+                      height: double.infinity,
+                      width: 300,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("rasm/b.jpg"),
+                              fit: BoxFit.cover)),
+                      height: double.infinity,
+                      width: 300,
+                    ),
+                  ),
+                ],
               ),
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("rasm/b.jpg"), fit: BoxFit.cover)),
-                  height: double.infinity,
-                  width: 300,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    ));
+            ),
+          ],
+        ));
   }
 }
