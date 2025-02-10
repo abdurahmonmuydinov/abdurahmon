@@ -81,6 +81,28 @@ class salom extends StatefulWidget {
 }
 
 class _salomState extends State<salom> {
+  String rasm = "rasm/a.jpg";
+  String b = "";
+  String text = "";
+  void funksiya() {
+    setState(() {
+      if (b == "a") {
+        rasm = "rasm/i.jpg";
+        text = "instagiram";
+      } else if (b == "d") {
+        rasm = "rasm/a.jpg";
+        text = "akchiya";
+      }
+      if (b == "g") {
+        rasm = "rasm/b.jpg";
+        text = "burger";
+      } else if (b == "l") {
+        rasm = "rasm/bb.jpg";
+        text = "brrgerr";
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,9 +115,10 @@ class _salomState extends State<salom> {
               child: Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("rasm/i.jpg"), fit: BoxFit.cover)),
+                        image: AssetImage(rasm), fit: BoxFit.cover)),
                 width: double.infinity,
                 height: 600,
+                child: Center(child: Text(text)),
               ),
             ),
             Container(
@@ -104,33 +127,67 @@ class _salomState extends State<salom> {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("rasm/i.jpg"),
-                              fit: BoxFit.cover)),
-                      height: double.infinity,
-                      width: 300,
+                    child: InkWell(
+                      onTap: () {
+                        b = "a";
+                        funksiya();
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("rasm/i.jpg"),
+                                fit: BoxFit.cover)),
+                        height: double.infinity,
+                        width: 300,
+                      ),
                     ),
                   ),
                   Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("rasm/a.jpg"),
-                              fit: BoxFit.cover)),
-                      height: double.infinity,
-                      width: 300,
+                    child: InkWell(
+                      onTap: () {
+                        b = "d";
+                        funksiya();
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("rasm/a.jpg"),
+                                fit: BoxFit.cover)),
+                        height: double.infinity,
+                        width: 300,
+                      ),
                     ),
                   ),
                   Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("rasm/b.jpg"),
-                              fit: BoxFit.cover)),
-                      height: double.infinity,
-                      width: 300,
+                    child: InkWell(
+                      onTap: () {
+                        b = "g";
+                        funksiya();
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("rasm/b.jpg"),
+                                fit: BoxFit.cover)),
+                        height: double.infinity,
+                        width: 300,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: InkWell(
+                      onTap: () {
+                        b = "l";
+                        funksiya();
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("rasm/bb.jpg"),
+                                fit: BoxFit.cover)),
+                        height: double.infinity,
+                        width: 300,
+                      ),
                     ),
                   ),
                 ],
