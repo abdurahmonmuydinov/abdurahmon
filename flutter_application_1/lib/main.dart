@@ -84,6 +84,7 @@ class _salomState extends State<salom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("data"),),
         body: Column(
       children: [
         Expanded(
